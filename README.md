@@ -1,4 +1,4 @@
-# 📖 Context-Aware Religious Chatbot
+# 📖 Context Aware Religious Chatbot
 
 A Streamlit-based application that answers queries using the sacred texts of the **Bhagavad Gita** and **Patanjali Yog Sutras**. This chatbot combines advanced AI with hybrid retrieval techniques to deliver precise answers and relevant verses.
 
