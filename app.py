@@ -52,6 +52,7 @@ def process_query(query):
 
     for doc in flattened_combined_docs:
         document_info = {
+            "source" : doc.metadata.get("source", "N/A"),
             "chapter": doc.metadata.get("chapter", "N/A"),
             "verse": doc.metadata.get("verse", "N/A"),
             "sanskrit": doc.page_content.split("\n")[0] if len(doc.page_content.split("\n")) > 0 else "N/A",
@@ -107,6 +108,7 @@ if st.button("✨ Generate Answer"):
         with st.expander("View Relevant Verses"):
             for verse in result["verses_relevant_to_the_query"]:
                 st.markdown(f"""
+                - **Source**: {verse['source']}
                 - **Chapter**: {verse['chapter']}
                 - **Verse**: {verse['verse']}
                 - **Sanskrit**: {verse['sanskrit']}
